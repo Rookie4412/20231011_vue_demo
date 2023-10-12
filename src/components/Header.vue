@@ -12,7 +12,10 @@ export default{
         
         <RouterLink to="/" class="oo">home</RouterLink>
         <RouterLink to="/VtextAndVModel" class="oo1">V-text & V-model</RouterLink>
-        <RouterLink to="/Vfor" >V-for</RouterLink>
+        <RouterLink to="/Vfor" class="oo2">V-for</RouterLink>
+        <RouterLink to="/sweet" class="oo3">sweet</RouterLink>
+        <RouterLink to="/sweet2" class="oo4">sweet2</RouterLink>
+
     </nav>
 </template>
 
@@ -32,6 +35,18 @@ export default{
         margin-right: 5%;
     }
     .oo1{
+        text-decoration: none;
+        margin-right: 5%;
+    }
+    .oo2{
+        text-decoration: none;
+        margin-right: 5%;
+    }
+    .oo3{
+        text-decoration: none;
+        margin-right: 5%;
+    }
+    .oo4{
         text-decoration: none;
         margin-right: 5%;
     }
