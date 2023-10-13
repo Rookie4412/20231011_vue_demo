@@ -7,23 +7,25 @@ import test from "../src/components/test.vue"
 
 <template>
   <div class="topHeader">
-  <Header />
+    <Header />
   </div>
-
-  <RouterView />
+  <div class="all">
+    <RouterView />
+  </div>
   <!-- <HomeView /> -->
 </template>
 
 <style scoped>
-.headershow{
+.headershow {
   width: 100vw;
   height: 15vh;
 }
-
-.contenshow{
+.all{
+  text-align: center;
+}
+.contenshow {
   width: 100vw;
   height: 60vh;
   text-align: center;
 }
-
 </style>

@@ -10,11 +10,12 @@ export default{
 <template>
     <nav class="topNav">
         
-        <RouterLink to="/" class="oo">home</RouterLink>
+        <RouterLink to="/" class="oo">主頁</RouterLink>
         <RouterLink to="/VtextAndVModel" class="oo1">V-text & V-model</RouterLink>
         <RouterLink to="/Vfor" class="oo2">V-for</RouterLink>
         <RouterLink to="/sweet" class="oo3">sweet</RouterLink>
         <RouterLink to="/sweet2" class="oo4">sweet2</RouterLink>
+        <RouterLink to="/Von" class="oo5">V-on</RouterLink>
 
     </nav>
 </template>
@@ -47,6 +48,10 @@ export default{
         margin-right: 5%;
     }
     .oo4{
+        text-decoration: none;
+        margin-right: 5%;
+    }
+    .oo5{
         text-decoration: none;
         margin-right: 5%;
     }

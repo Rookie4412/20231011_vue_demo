@@ -17,7 +17,6 @@ export default {
         <div class="letf"></div>
         <div class="right">
             <div class="name">
-
                 <h1>Title</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, omnis!</p>
             </div>
