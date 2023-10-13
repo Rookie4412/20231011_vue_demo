@@ -15,12 +15,10 @@ export default {
 
 <template>
   <div class="headerShow">
-    <h1>home</h1>
-    <!-- <Header /> -->
+    <h1>自我介紹</h1>
   </div>
 
   <div class="showContent">
-    <!-- <RouterView /> -->
   </div>
 </template>
 

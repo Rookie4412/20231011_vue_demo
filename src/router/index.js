@@ -32,6 +32,11 @@ const router = createRouter({
       name:'sweet2',
       component: () => import('../views/sweet2.vue')
     },
+    {
+      path:'/Von',
+      name:'Von',
+      component: () => import('../views/Von.vue')
+    },
 
     ]
 })

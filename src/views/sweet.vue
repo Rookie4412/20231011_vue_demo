@@ -2,7 +2,7 @@
 export default {
     data() {
         return {
-            arr: [1,2,3,],
+            arr: [1,2,3],
         }
     }
 }
@@ -39,6 +39,7 @@ export default {
 .secondPage {
     height: 50vh;
     width: 100%;
+    margin-top: 1%;
     background-color: white;
     display: flex;
     justify-content: space-between;

@@ -104,25 +104,9 @@ p {
     align-items: center;
 }
 
-.all {
-    height: 15vh;
-    width: 100vw;
-
-    input {
-        margin-left: 43%;
-    }
-}
-
-select {
-    margin-top: 3%;
-    margin-left: 49.5%;
-}
-
 h4 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 </style>
