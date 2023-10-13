@@ -16,6 +16,7 @@ export default{
         <RouterLink to="/sweet" class="oo3">sweet</RouterLink>
         <RouterLink to="/sweet2" class="oo4">sweet2</RouterLink>
         <RouterLink to="/Von" class="oo5">V-on</RouterLink>
+        <RouterLink to="/dessert" class="oo6">dessert</RouterLink>
 
     </nav>
 </template>
@@ -52,6 +53,10 @@ export default{
         margin-right: 5%;
     }
     .oo5{
+        text-decoration: none;
+        margin-right: 5%;
+    }
+    .oo6{
         text-decoration: none;
         margin-right: 5%;
     }
