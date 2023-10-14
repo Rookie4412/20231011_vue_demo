@@ -17,6 +17,7 @@ export default{
         <RouterLink to="/sweet2" class="oo4">sweet2</RouterLink>
         <RouterLink to="/Von" class="oo5">V-on</RouterLink>
         <RouterLink to="/dessert" class="oo6">dessert</RouterLink>
+        <RouterLink to="/nember" class="oo7">猜數字</RouterLink>
 
     </nav>
 </template>
@@ -34,31 +35,35 @@ export default{
     
     .oo{
         text-decoration: none;
-        margin-right: 5%;
+        margin-right: 1%;
     }
     .oo1{
         text-decoration: none;
-        margin-right: 5%;
+        margin-right: 1%;
     }
     .oo2{
         text-decoration: none;
-        margin-right: 5%;
+        margin-right: 1%;
     }
     .oo3{
         text-decoration: none;
-        margin-right: 5%;
+        margin-right: 1%;
     }
     .oo4{
         text-decoration: none;
-        margin-right: 5%;
+        margin-right: 1%;
     }
     .oo5{
         text-decoration: none;
-        margin-right: 5%;
+        margin-right: 1%;
     }
     .oo6{
         text-decoration: none;
-        margin-right: 5%;
+        margin-right: 1%;
+    }
+    .oo7{
+        text-decoration: none;
+        margin-right: 1%;
     }
 }
 
