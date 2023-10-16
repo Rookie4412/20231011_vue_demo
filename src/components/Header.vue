@@ -1,70 +1,54 @@
 <script >
 import { RouterLink, RouterView } from 'vue-router'
-export default{
-    components:{
+export default {
+    components: {
         RouterLink
-    }
+    },
 }
 </script>
 
 <template>
     <nav class="topNav">
-        
-        <RouterLink to="/" class="oo">主頁</RouterLink>
-        <RouterLink to="/VtextAndVModel" class="oo1">V-text & V-model</RouterLink>
-        <RouterLink to="/Vfor" class="oo2">V-for</RouterLink>
-        <RouterLink to="/sweet" class="oo3">sweet</RouterLink>
-        <RouterLink to="/sweet2" class="oo4">sweet2</RouterLink>
-        <RouterLink to="/Von" class="oo5">V-on</RouterLink>
-        <RouterLink to="/dessert" class="oo6">dessert</RouterLink>
-        <RouterLink to="/nember" class="oo7">猜數字</RouterLink>
-
+        <div class="toplink">
+            <RouterLink to="/" class="oo1 link1">主頁</RouterLink>
+            <RouterLink to="/notes" class="oo1 link10">課堂精隨</RouterLink>
+            
+        </div>
     </nav>
 </template>
 
 <style lang="scss" scoped>
-.topNav{
+.topNav {
     width: 100%;
-    height: 100%;
-    background-color: skyblue;
+    height: 10vh;
+    background-color: #c04851;
     font-size: 24pt;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    .oo{
-        text-decoration: none;
-        margin-right: 1%;
-    }
-    .oo1{
-        text-decoration: none;
-        margin-right: 1%;
-    }
-    .oo2{
-        text-decoration: none;
-        margin-right: 1%;
-    }
-    .oo3{
-        text-decoration: none;
-        margin-right: 1%;
-    }
-    .oo4{
-        text-decoration: none;
-        margin-right: 1%;
-    }
-    .oo5{
-        text-decoration: none;
-        margin-right: 1%;
-    }
-    .oo6{
-        text-decoration: none;
-        margin-right: 1%;
-    }
-    .oo7{
-        text-decoration: none;
-        margin-right: 1%;
-    }
 }
 
+.toplink {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .oo1 {
+        text-decoration: none;
+        font-size: 30pt;
+        color: white;
+    }
+
+    .link1 {
+        &:hover {
+            color: black;
+        }
+    }
+    .link10 {
+        &:hover {
+            color: black;
+        }
+    }
+
+}
 </style>

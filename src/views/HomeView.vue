@@ -14,17 +14,12 @@ export default {
 </script>
 
 <template>
-  <div class="headerShow">
-    <h1>自我介紹</h1>
-  </div>
+  <div class="all">
+    <div class="first Page">
+      
+    </div>
 
-  <div class="showContent">
   </div>
 </template>
 
-<style lang="scss" scoped>
-.heaterShow {
-  width: 100vw;
-  height: 100vh;
-}
-</style>
+<style lang="scss" scoped></style>
