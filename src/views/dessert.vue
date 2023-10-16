@@ -2,8 +2,16 @@
 export default {
     data() {
         return {
-            arr: [1],
-            arr2:[1,2,3],
+            arr: [
+            "../../甜點圖片/3.png",
+            "../../甜點圖片/2.png",
+            "../../甜點圖片/4.png",
+            ],
+            arr2: [
+            "../../甜點圖片/5.png",
+            "../../甜點圖片/6.png",
+            "../../甜點圖片/7.png"
+            ],
         }
     },
     methods: {
@@ -37,14 +45,10 @@ export default {
             <h1>On sale</h1>
         </div>
         <div class="thiredlast">
-            <div v-for=" in arr" class="photo1">
-                <img src="../../甜點圖片/3.png" alt="">
-                <img src="../../甜點圖片/2.png" alt="">
-                <img src="../../甜點圖片/4.png" alt="">
-            </div>
-            <div class="last1">
-                <div v-for=" in arr2" class="button">
-                    <button class="qq">item</button>
+            <div class="card01" style="width: 18rem;" v-for="x in arr">
+                <img :src="x" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">item</a>
                 </div>
             </div>
         </div>
@@ -56,20 +60,14 @@ export default {
             <h1>News</h1>
         </div>
         <div class="fourcard">
-            <div class="card">
-                <img src="../../甜點圖片/5.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias aspernatur fugit nulla, vero eligendi incidunt.</p>
-                <button>Detail</button>
-            </div>
-            <div class="card">
-                <img src="../../甜點圖片/6.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias aspernatur fugit nulla, vero eligendi incidunt.</p>
-                <button>Detail</button>
-            </div>
-            <div class="card">
-                <img src="../../甜點圖片/7.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias aspernatur fugit nulla, vero eligendi incidunt.</p>
-                <button>Detail</button>
+            <div class="card" style="width: 18rem;" v-for="item in arr2">
+                <img :src="item" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
             </div>
         </div>
         <button class="more">More</button>
@@ -81,7 +79,10 @@ export default {
         </div>
         <div class="fiveright">
             <h1>New Arrival</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, neque quidem. Error laborum quam fugit ipsum cum nulla nihil quod nemo officia sint ea, ex beatae fugiat ratione veniam maiores reprehenderit. Laborum aliquid vitae facere modi commodi culpa sit, odio excepturi cumque molestiae, atque, dolorem autem voluptatibus doloremque explicabo assumenda.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, neque quidem. Error laborum quam fugit ipsum
+                cum nulla nihil quod nemo officia sint ea, ex beatae fugiat ratione veniam maiores reprehenderit. Laborum
+                aliquid vitae facere modi commodi culpa sit, odio excepturi cumque molestiae, atque, dolorem autem
+                voluptatibus doloremque explicabo assumenda.</p>
         </div>
     </div>
 
@@ -96,6 +97,7 @@ export default {
     margin: 0;
     background-color: blanchedalmond;
 }
+
 .first {
     height: 30vh;
     display: flex;
@@ -121,6 +123,7 @@ export default {
         }
     }
 }
+
 .second {
     height: 60vh;
     display: flex;
@@ -144,8 +147,10 @@ export default {
         }
     }
 }
+
 .thired {
     height: 80vh;
+
     h1 {
         height: 20%;
         width: 100%;
@@ -153,60 +158,48 @@ export default {
 
     .thiredlast {
         height: 80%;
-        width: 100%;
-        .photo1 {
-            display: flex;
-            justify-content: space-between;
-            height: 90%;
-            width: 90%;
-            margin-left: 5%;
-            img {
-                height: 100%;
-                width: 20%;
-            }
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        img{
+            height: 100%;
         }
-        .last1{
-            height: 10%;
-            width: 90%;
-            margin-left: 5%;
-            display: flex;
-            justify-content: space-between;
-            margin-top: -5%;
-
-            .button{
-                height: 100%;
-                width: 20%;
-            }
-            .qq{
-                height: 100%;
-                width: 40%;
-                background-color: palevioletred;
-                color:white;
-            }
+        .card-body{
+            margin-top :-15%;
+            color: palevioletred;
         }
     }
-    .hr{
-            height: 0%;
-            width: 100%;
-            border: 0.5px solid black;
-            margin-top: 1%;
-        }
+
+    .hr {
+        height: 0%;
+        width: 100%;
+        border: 0.5px solid black;
+        margin-top: 1%;
+    }
 }
-.four{
+
+.four {
     height: 90vh;
-    .fourcard{
+
+    .fourcard {
         height: 70%;
         width: 90%;
         margin-left: 5%;
         display: flex;
         justify-content: space-between;
-        .card{
+
+        .card {
             height: 100%;
             width: 20%;
-            p{
+
+            p {
                 font-size: 15pt;
             }
-            button{
+
+            button {
                 width: 60%;
                 margin-left: 2%;
                 background-color: black;
@@ -214,22 +207,26 @@ export default {
             }
         }
     }
-    .more{
+
+    .more {
         margin-top: 3%;
         width: 15%;
         background-color: palevioletred;
         color: white;
     }
 }
-.five{
+
+.five {
     height: 90vh;
     display: flex;
     justify-content: space-between;
-    .fiveleft{
+
+    .fiveleft {
         height: 90%;
         width: 40%;
         background-color: palevioletred;
-        img{
+
+        img {
             height: 80%;
             width: 100%;
             margin-top: 8%;
@@ -237,7 +234,8 @@ export default {
 
         }
     }
-    .fiveright{
+
+    .fiveright {
         height: 50%;
         width: 40%;
         margin-top: 8%;
@@ -245,11 +243,11 @@ export default {
         background-color: palevioletred;
     }
 }
-.last{
+
+.last {
     height: 10vh;
     background-color: palevioletred;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-</style>
+}</style>

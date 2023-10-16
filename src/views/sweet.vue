@@ -49,7 +49,6 @@ export default {
         background-color: rgb(152, 235, 246);
     }
 }
-
 .thirdPage {
     height: 70vh;
     width: 100%;
@@ -77,15 +76,11 @@ export default {
             margin-left: 15%;
         }
     }
-
-
 }
 
 .lastPage {
     height: 20vh;
     width: 100%;
     background-color: rgb(152, 235, 246);
-
-
 }
 </style>

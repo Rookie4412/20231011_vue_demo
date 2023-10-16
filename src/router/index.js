@@ -47,6 +47,21 @@ const router = createRouter({
       name:'nember',
       component: () => import('../views/nember.vue')
     },
+    {
+      path:'/vbind',
+      name:'vbind',
+      component: () => import('../views/vbind.vue')
+    },
+    {
+      path:'/notes',
+      name:'notes',
+      component: () => import('../views/notes.vue')
+    },
+    {
+      path:'/Fall',
+      name:'Fall',
+      component: () => import('../views/Fall.vue')
+    },
 
     ]
 })
