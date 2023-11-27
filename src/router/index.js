@@ -1,6 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
+// import * as echarts from 'echarts/core'
+// import {
+//   TitleComponent,
+//   TooltipComponent,
+//   LegendComponent
+// }from 'echarts/components'
+// import {
+//   PieChart
+// }from 'echarts/charts'
+// import{
+//   CanvasRenderer
+// }from 'echarts/rederers'
+
+// echarts.use(
+//   [TitleComponent,TooltipComponent,LegendComponent,PieChart,CanvasRenderer]
+// )
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,58 +27,41 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/VtextAndVModel',
-      name: 'VtextAndVModel',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/VtextAndVModel.vue')
+      path: '/vote',
+      name: 'vote',
+      component: () => import('../views/vote.vue')
     },
     {
-      path:'/Vfor',
-      name:'Vfor',
-      component: () => import('../views/Vfor.vue')
+      path: '/confirm',
+      name: 'confirm',
+      component: () => import('../views/confirm.vue')
     },
     {
-      path:'/sweet',
-      name:'sweet',
-      component: () => import('../views/sweet.vue')
+      path: '/BakeQuestion',
+      name: 'BakeQuestion',
+      component: () => import('../views/BakeQuestion.vue')
     },
     {
-      path:'/sweet2',
-      name:'sweet2',
-      component: () => import('../views/sweet2.vue')
+      path: '/Question',
+      name: 'Question',
+      component: () => import('../views/Question.vue')
     },
     {
-      path:'/Von',
-      name:'Von',
-      component: () => import('../views/Von.vue')
+      path: '/material',
+      name: 'material',
+      component: () => import('../views/material.vue')
     },
     {
-      path:'/dessert',
-      name:'dessert',
-      component: () => import('../views/dessert.vue')
+      path: '/topic',
+      name: 'topic',
+      component: () => import('../views/topic.vue')
     },
     {
-      path:'/nember',
-      name:'nember',
-      component: () => import('../views/nember.vue')
+      path: '/total',
+      name: 'total',
+      component: () => import('../views/total.vue')
     },
-    {
-      path:'/vbind',
-      name:'vbind',
-      component: () => import('../views/vbind.vue')
-    },
-    {
-      path:'/notes',
-      name:'notes',
-      component: () => import('../views/notes.vue')
-    },
-    {
-      path:'/Fall',
-      name:'Fall',
-      component: () => import('../views/Fall.vue')
-    },
+    
 
     ]
 })
