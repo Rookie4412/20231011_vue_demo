@@ -41,25 +41,30 @@ const router = createRouter({
       name: 'BakeQuestion',
       component: () => import('../views/BakeQuestion.vue')
     },
+    // {
+    //   path: '/Question',
+    //   name: 'Question',
+    //   component: () => import('../views/Question.vue')
+    // },
+    // {
+    //   path: '/material',
+    //   name: 'material',
+    //   component: () => import('../views/material.vue')
+    // },
+    // {
+    //   path: '/topic',
+    //   name: 'topic',
+    //   component: () => import('../views/topic.vue')
+    // },
+    // {
+    //   path: '/total',
+    //   name: 'total',
+    //   component: () => import('../views/total.vue')
+    // },
     {
-      path: '/Question',
-      name: 'Question',
-      component: () => import('../views/Question.vue')
-    },
-    {
-      path: '/material',
-      name: 'material',
-      component: () => import('../views/material.vue')
-    },
-    {
-      path: '/topic',
-      name: 'topic',
-      component: () => import('../views/topic.vue')
-    },
-    {
-      path: '/total',
-      name: 'total',
-      component: () => import('../views/total.vue')
+      path: '/List',
+      name: 'List',
+      component: () => import('../views/List.vue')
     },
     
 

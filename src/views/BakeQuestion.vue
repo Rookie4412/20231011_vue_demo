@@ -8,16 +8,19 @@ export default {
             //總共問卷
             allQuestionnaire: [],
             //搜尋
-            // searchId: 0,
             searchTitle: "",
-            // searchState: false,
             searchStartDate: "",
             searchEndDate: "",
+            //time
+            currentDate: "",
             //分頁
             perpage: 7,
             currentPage: 1,
             //刪除
-            key: 0
+            arr: [],
+            id: 0,
+            //換頁
+            page: 0,
         };
     },
     methods: {
@@ -28,8 +31,12 @@ export default {
                 .then(data => {
                     this.allQuestionnaire = data;
                     this.allQuestionnaire = this.allQuestionnaire.quizVoList.reverse();
-                    console.log(data);
+
+                    // console.log(data);
                     console.log(this.allQuestionnaire);
+                    // this.arr = this.allQuestionnaire;
+                    // this.arr = this.arr[this.id].questionnaire;
+                    // console.log(this.arr);
                 })
         },
         //分頁
@@ -41,14 +48,34 @@ export default {
         },
         // 刪除問題
         deleteQustionnaire() {
-            fetch("http://localhost:8080/api/quiz/deleteQustionnaire")
+            fetch('http://localhost:8080/api/quiz/deleteQustionnaire', {
+                method: "POST",
+                headers: new Headers({
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                }),
+                body: JSON.stringify({
+                    qnList: [this.id]
+                })
+            })
                 .then(res => res.json())
                 .then(data => {
-                    // this.allQuestionnaire = data;
-                    console.log(data);
-                    console.log(this.allQuestionnaire);
+
                 })
+            window.location.reload()
+        },
+        //刪除
+        getid(item) {
+            // this.arr.push( item.questionnaire.id);
+            this.id = item.questionnaire.id;
+            console.log(this.arr)
+        },
+        changepage() {
+            this.page = 1
         }
+    },
+    mounted() {
+        this.searchAll()
     },
     computed: {
         // 分頁
@@ -64,6 +91,14 @@ export default {
             return this.currentPage * this.perpage
             //取得該頁最後一個值的index
         }
+    },
+    created() {
+        const date = new Date()
+        const year = date.getFullYear()
+        const month = date.getMonth() + 1
+        const day = date.getDate()
+        this.currentDate = `${year}-${month}-${day}`
+        console.log(this.currentDate)
     },
     components: {
         RouterLink,
@@ -93,7 +128,7 @@ export default {
         <div class="bet">
             <i class="fa-solid fa-trash" @click="deleteQustionnaire"></i>
 
-            <RouterLink to="/Question" style="margin-left: 3%;">
+            <RouterLink to="/List" style="margin-left: 3%;">
                 <i class="fa-solid fa-plus"></i>
             </RouterLink>
         </div>
@@ -108,20 +143,22 @@ export default {
                 <p>結束時間</p>
                 <p>觀看統計</p>
             </div>
-            <div class="secondLast" v-for=" item, index in allQuestionnaire.slice(pageStart, pageEnd)">
+            <div class="secondLast" v-for=" (item) in allQuestionnaire.slice(pageStart, pageEnd)">
                 <span style="width: 15%;">
-                    <input type="checkbox" :key="item.id" v-model="item.checkbox" >
+                    <input type="checkbox" v-model="item.checkbox" @click="getid(item)">
                 </span>
                 <span>{{ item.questionnaire.id }}</span>
                 <span>{{ item.questionnaire.title }}</span>
-                <span v-if="item.questionnaire.published == true" style="color: rgb(31, 161, 31);">開放中 </span>
-                <span v-else="item.questionnaire.published == true " style="color: red;">未開放</span>
+                <span
+                    v-if="item.questionnaire.startDate <= this.currentDate && item.questionnaire.endDate > this.currentDate"
+                    style="color: rgb(31, 161, 31);">開放中 </span>
+                <span v-else style="color: red;">未開放</span>
                 <span>{{ item.questionnaire.startDate }}</span>
                 <span>{{ item.questionnaire.endDate }}</span>
                 <span>統計</span>
             </div>
         </div>
-
+        <!-- 分頁 -->
         <div class="page">
             <ul class="pagination">
                 <li class="page-item" @click.prevent="setPage(currentPage - 1)">
