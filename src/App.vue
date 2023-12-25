@@ -1,24 +1,8 @@
-<script>
-// 前置環境 環境安裝 In json
-// "scripts": {
-//   "serve": "vue-cli-service serve",
-//   "build": "vue-cli-service build",
-//   "lint": "vue-cli-service lint"
-// }放入這個，跑
-// npm run serve 這個
-// 不行再跑 npm install @vue/cli 之後再執行
+<script setup>
+import HomeView from "./views/HomeView.vue"
+import Header from "../src/components/Header.vue"
+import test from "../src/components/test.vue"
 
-// 匯入Three
-import ThreeSphere from "./components/ThreeSphere.vue";
-// import HomeView from "./views/HomeView.vue";
-
-export default {
-    name: "App",
-    components: {
-    ThreeSphere,
-    // HomeView
-},
-};
 </script>
 
 <template>
